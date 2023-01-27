@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="modal-title">{{character.name}}</h5>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row" >
+                <div class="col-3" >
+                    <img alt="" class="img-thumbnail rounded" src="{{character.image}}">            
+                </div>
+                <div class="col-6" >
+                    <ul class="list-group text-dark mb-3 ">
+                        <li class="list-group-item">Status: {{character.status}}</li>
+                        <li class="list-group-item">Species: {{character.species}}</li>
+                        <li class="list-group-item">Gender: {{character.gender}}</li>
+                        <li class="list-group-item">Origin: {{character.origin.name}} </li>
+                        <li class="list-group-item">Location: {{character.location.name}}</li>
+                    </ul>
+                    <button routerLink='/character' type="button"  class="btn btn-dark btn-lg btn-block ftkanit fs-6 ">Volver</button>                   
+                </div>
+            </div>
+
+        </div>
+     
+    </div>
+
+   
+  </div>

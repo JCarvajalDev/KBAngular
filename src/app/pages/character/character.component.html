@@ -1,0 +1,57 @@
+<div class="container">
+<div class="row">
+  <div class="form-group">    
+    <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Busqueda de personaje"  (keyup)="buscarPersonaje($event)" >
+  </div>
+</div>
+
+
+    <div class="row" >
+
+      <div class="fa-5x container text-center" *ngIf="carga">
+        <i class="fas fa-spinner fa-spin"></i>
+      </div>
+
+      <div class="col-3" *ngFor="let item of character?.results">
+  
+  
+        <div class="card mt-3 shadow-sm p-3 mb-5 bg-white rounded" style="width: 18rem;">
+          <img src="{{item.image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+          
+    
+  
+            <a [routerLink]="['/character',item.id]"  class="btn btn-block btn-dark ">Detalle personaje</a>
+  
+  
+          </div>
+          <div class="card-footer text-center">
+            Creado: {{item.created  | date:'MMMM d, y' }}
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+    
+
+
+    <div class="row mt-5">
+      <div class="col-6 text-left" >
+        <a  *ngIf="prev" class="btn btn-block btn-dark" href="javascript:void(0);" (click)="Nprev(prev)">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i> Anterior</a>
+      </div>
+      <div class="col-6 next" *ngIf="next">
+        <a class="btn btn-block btn-dark" href="javascript:void(0);" (click)="Nnext(next)">
+          Siguiente  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  
+  

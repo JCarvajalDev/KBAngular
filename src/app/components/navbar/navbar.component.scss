@@ -1,0 +1,35 @@
+.navbar {
+    box-shadow: 0 0px 10px 0 rgb(0 0 0 / 40%);
+}
+
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: auto!important;
+}
+
+.mr-sm-2, .mx-sm-2 {
+    margin-right: 0.5rem!important;
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.nava{
+    font-family: 'Kanit',serif;
+}
+
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
